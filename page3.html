@@ -3,27 +3,25 @@
 <head>
   <title>Private</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 </head>
 <body>
 
 <div class="container">
   <h1>Tap the circles 😊</h1>
 
-  <div class="circle" onclick="toggleCircle(this)">
-    ?
-    <span class="circleText">You're kinda my favorite person.</span>
+  <div class="circleBox" onclick="toggleCircle(this)">
+    <div class="circle">?</div>
+    <p class="circleText">You're kinda my favorite person.</p>
   </div>
 
-  <div class="circle" onclick="toggleCircle(this)">
-    ?
-    <span class="circleText">Don't tell anyone but I appreciate you a lot.</span>
+  <div class="circleBox" onclick="toggleCircle(this)">
+    <div class="circle">?</div>
+    <p class="circleText">Don't tell anyone but I appreciate you a lot.</p>
   </div>
 
-  <div class="circle" onclick="toggleCircle(this)">
-    ?
-    <span class="circleText">You make ordinary days better.</span>
+  <div class="circleBox" onclick="toggleCircle(this)">
+    <div class="circle">?</div>
+    <p class="circleText">You make ordinary days better.</p>
   </div>
 
   <button onclick="goPage4()">Final Page</button>
