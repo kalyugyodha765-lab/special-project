@@ -4,30 +4,15 @@
   <title>Our Space 🌙</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Firebase v8 SDK -->
+  <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAFVBx0j85rWLIh6NB_dm2iWvmx6pVaRDA",
-      authDomain: "ui-demo-project-b5930.firebaseapp.com",
-      databaseURL: "https://ui-demo-project-b5930-default-rtdb.firebaseio.com",
-      projectId: "ui-demo-project-b5930",
-      storageBucket: "ui-demo-project-b5930.firebasestorage.app",
-      messagingSenderId: "409754751751",
-      appId: "1:409754751751:web:b587d250a689e35e0caba2"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
-  </script>
 </head>
 <body>
 
 <div class="container">
   <h1>Hey you ✨</h1>
-  <p>Enter your name...</p>
+  <p>Enter your name</p>
   <input type="text" id="nameInput" placeholder="Your name">
   <button onclick="saveName()">Continue</button>
 </div>
