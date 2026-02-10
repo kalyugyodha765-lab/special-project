@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page 2</title>
+  <title>Special</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 </head>
 <body>
 
 <div class="container">
-  <h1>Tap Something 😌</h1>
+  <h1>Tap the cards 😌</h1>
 
   <div class="card" onclick="toggleCard(this)">
     <h3>Tap if you miss me 🤍</h3>
     <p class="hidden">I probably miss you more.</p>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+    <h3>Emergency Smile Button 🚨</h3>
+    <p class="hidden">You look dangerous when you smile.</p>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+    <h3>Open if you're sad 🌧️</h3>
+    <p class="hidden">I'm always here. No conditions.</p>
   </div>
 
   <button onclick="goPage3()">Next</button>
