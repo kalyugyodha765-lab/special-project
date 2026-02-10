@@ -9,22 +9,29 @@ const firebaseConfig = {
   appId: "1:409754751751:web:b587d250a689e35e0caba2"
 };
 
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
 function saveName() {
+
+  alert("Button clicked ✅");
+
   let name = document.getElementById("nameInput").value;
 
-  if(name.trim()===""){
-    alert("Enter your name");
+  if(name.trim() === ""){
+    alert("Enter your name first");
     return;
   }
 
-  database.ref("names").push({
-    username:name
+  // TEST WRITE
+  database.ref("test123").set({
+    check: "working"
   });
 
-  window.location.href="page2.html";
+  alert("Trying to write to Firebase 🚀");
+
+  window.location.href = "page2.html";
 }
 
 function toggleCard(card){
@@ -41,28 +48,4 @@ function goPage3(){
 
 function goPage4(){
   window.location.href="page4.html";
-}
-
-function checkPass(){
-  let pass=document.getElementById("pass").value;
-
-  if(pass==="mySecret123"){
-    document.getElementById("adminPanel").style.display="block";
-    loadNames();
-  } else {
-    alert("Wrong password");
-  }
-}
-
-function loadNames(){
-  let list=document.getElementById("nameList");
-  list.innerHTML="";
-
-  database.ref("names").once("value",function(snapshot){
-    snapshot.forEach(function(child){
-      let li=document.createElement("li");
-      li.innerText=child.val().username;
-      list.appendChild(li);
-    });
-  });
 }
