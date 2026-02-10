@@ -16,7 +16,6 @@ function saveName() {
     body: "entry.273210999=" + encodeURIComponent(name)
   });
 
-  alert("Saved successfully 😌");
 
   window.location.href="page2.html";
 }
